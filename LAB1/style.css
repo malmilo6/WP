@@ -66,3 +66,20 @@ h2 {
 .thing:last-child {
   margin-right: 0;
 }
+
+#review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review p {
+  font-size: 30px;
+  width: 70vw;
+}
+
+.review img {
+  width: 50vw;
+  height: auto;
+  margin-bottom: 20px;
+}
