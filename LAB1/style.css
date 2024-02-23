@@ -1,0 +1,85 @@
+body {
+  background-color: rgba(3, 0, 63, 0.708);
+  color: #eaeaea;
+  overflow-x: hidden;
+}
+
+#home {
+  position: relative;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home #h1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  line-height: 10vh;
+  font-size: 64px;
+  color: rgb(223, 228, 255);
+  margin: 0 10px;
+}
+
+section {
+  padding: 25px 20px 0 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.thing {
+  margin-right: 30px;
+  display: inline-block;
+  width: 20vw;
+  vertical-align: top;
+}
+
+.thing img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.thing h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.thing p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.thing:last-child {
+  margin-right: 0;
+}
+
+#review-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review p {
+  font-size: 30px;
+  width: 70vw;
+}
+
+.review img {
+  width: 50vw;
+  height: auto;
+  margin-bottom: 20px;
+}
