@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 <body>
+    <nav id="sidebar">
+      <button id="hamburger">&#9776;</button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#we-provide">What we provide?</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#leave-review">Leave your review</a></li>
+      </ul>
+    </nav>
+
     <div id="content">
       <section id="home">
         <div id="h1-container">
@@ -137,6 +147,21 @@
           <button type="submit">Submit Review</button>
         </form>
       </section>
+      <footer>
+          <div class="footer-content">
+            <nav>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </nav>
+            <p>&copy; 2024 Fishing organization. All Rights Reserved.</p>
+          </div>
+        </footer>
+
+
+          <script>
+      document.addEventListener("DOMContentLoaded", function () {
     </div>
 
       <script>
@@ -160,6 +185,30 @@
         }
 
         showReview(currentReviewIndex);
+
+        setInterval(showNextReview, 10000);
+
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+
+        hamburger.addEventListener("click", function () {
+          sidebar.classList.toggle("open");
+        });
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            sidebar.classList.remove("open");
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              targetSection.scrollIntoView();
+            }
+          });
+        });
+      });
+    </script>
 
         setInterval(showNextReview, 10000);
       </script>
