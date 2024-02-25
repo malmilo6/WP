@@ -108,6 +108,60 @@
         </div>
       </section>
 
+            <section id="leave-review" >
+        <h2>Leave Your Review</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="rating">Your Rating:</label>
+            <select id="rating" name="rating" required>
+              <option value="">Select Rating</option>
+              <option value="5">5 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="2">2 Stars</option>
+              <option value="1">1 Star</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+          </div>
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+    </div>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const reviews = document.querySelectorAll(".review");
+        let currentReviewIndex = 0;
+
+        function showReview(index) {
+          reviews.forEach((review, i) => {
+            if (i === index) {
+              review.style.display = "block";
+            } else {
+              review.style.display = "none";
+            }
+          });
+        }
+
+        function showNextReview() {
+          currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+          showReview(currentReviewIndex);
+        }
+
+        showReview(currentReviewIndex);
+
+        setInterval(showNextReview, 10000);
+      </script>
     </div>
 </body>
