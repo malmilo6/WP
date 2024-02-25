@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-<body>
+  <body>
     <nav id="sidebar">
       <button id="hamburger">&#9776;</button>
       <ul>
@@ -17,7 +17,6 @@
         <li><a href="#leave-review">Leave your review</a></li>
       </ul>
     </nav>
-
     <div id="content">
       <section id="home">
         <div id="h1-container">
@@ -25,8 +24,7 @@
           <h1>You fish, we do the rest!</h1>
         </div>
       </section>
-
-       <section id="we-provide">
+      <section id="we-provide">
         <h2>We provide:</h2>
         <div class="thing">
           <img src="./assets/baitcaster.jpg"/>
@@ -76,7 +74,6 @@
           </p>
         </div>
       </section>
-
       <section id="reviews">
         <h2>Reviews</h2>
         <div id="review-container">
@@ -117,8 +114,7 @@
           </div>
         </div>
       </section>
-
-            <section id="leave-review" >
+      <section id="leave-review" >
         <h2>Leave Your Review</h2>
         <form action="#" method="post">
           <div class="form-group">
@@ -147,25 +143,21 @@
           <button type="submit">Submit Review</button>
         </form>
       </section>
-      <footer>
-          <div class="footer-content">
-            <nav>
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </nav>
-            <p>&copy; 2024 Fishing organization. All Rights Reserved.</p>
-          </div>
-        </footer>
-
-
-          <script>
-      document.addEventListener("DOMContentLoaded", function () {
     </div>
+    <footer>
+      <div class="footer-content">
+        <nav>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </nav>
+        <p>&copy; 2024 Fishing organization. All Rights Reserved.</p>
+      </div>
+    </footer>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         const reviews = document.querySelectorAll(".review");
         let currentReviewIndex = 0;
 
@@ -209,8 +201,5 @@
         });
       });
     </script>
-
-        setInterval(showNextReview, 10000);
-      </script>
-    </div>
-</body>
+  </body>
+</html>

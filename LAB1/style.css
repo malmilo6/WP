@@ -131,6 +131,46 @@ button[type="submit"]:hover {
   background-color: rgba(0, 11, 102, 0.732);
 }
 
+footer {
+  background-color: rgba(9, 5, 47, 0.8);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.footer-content {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.footer-content nav {
+  margin-bottom: 10px;
+}
+
+.footer-content nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-content nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-content nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-content nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content nav ul li a:hover {
+  text-decoration: underline;
+}
+
 #sidebar {
   position: fixed;
   top: 0;
@@ -180,45 +220,3 @@ button[type="submit"]:hover {
 #sidebar.open ul {
   display: block;
 }
-
-
-footer {
-  background-color: rgba(9, 5, 47, 0.8);
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 10px;
-}
-
-.footer-content {
-  max-width: 100vw;
-  margin: 0 auto;
-}
-
-.footer-content nav {
-  margin-bottom: 10px;
-}
-
-.footer-content nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-content nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer-content nav ul li:last-child {
-  margin-right: 0;
-}
-
-.footer-content nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-content nav ul li a:hover {
-  text-decoration: underline;
-}
-
