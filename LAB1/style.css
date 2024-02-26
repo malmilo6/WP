@@ -6,7 +6,7 @@ body {
 
 #home {
   position: relative;
-  background-image: url("./assets/bg.jpg");
+  background-image: url("./assets/bkg.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -25,7 +25,7 @@ body {
   line-height: 10vh;
   font-size: 64px;
   color: rgb(223, 228, 255);
-  margin: 0 10px;
+  margin: 0 10px 200px 10px;
 }
 
 section {
