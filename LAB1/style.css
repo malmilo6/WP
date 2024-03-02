@@ -39,10 +39,29 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
+  cursor: pointer;
+
 }
 
 #navbar #hamburger {
   display: none;
+
+}
+
+#navbar ul li a.leave-review {
+  background-color: #8f97f3; 
+  color: #ffffff; 
+  border-radius: 5px; 
+  font-size: 1.1em; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+  padding: 0.2em;
+}
+
+
+#navbar ul li a.leave-review:hover {
+  background-color: #72aff5; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
 }
 
 #home {
@@ -169,10 +188,11 @@ h2 {
 
 button[type="submit"] {
   background-color: rgba(9, 5, 47, 0.8);
-  color: white;
-  padding: 15px 20px;
+  color: #ffffff;
+  padding: 12px 17px;
   font-size: 22px;
   width: 20vw;
+  border-radius: 10px;
 }
 
 button[type="submit"]:hover {

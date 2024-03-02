@@ -11,10 +11,12 @@
     <header id="main-header">
       <nav id="navbar">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#we-provide">We provide</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#leave-review">Leave review</a></li>
+          <li><a onclick="_scrollTo('home')">Home</a></li>
+          <li><a onclick="_scrollTo('we-provide')">We provide</a></li>
+          <li><a onclick="_scrollTo('reviews')">Reviews</a></li>
+          <li><a class="leave-review" onclick="_scrollTo('leave-review')">Explore service</a></li>
+
+
         </ul>
       </nav>
     </header>
@@ -107,35 +109,32 @@
         </div>
       </section>
       <section id="leave-review">
-        <h2>Leave Your Review</h2>
+
+        <h2>Leave Your Request</h2>
+
+
+
         <form action="#" method="post">
           <div class="form-group">
-            <label for="name">Your Name:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
           </div>
           <div class="form-group">
-            <label for="email">Your Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required />
           </div>
+
           <div class="form-group">
-            <label for="rating">Your Rating:</label>
-            <select id="rating" name="rating" required>
-              <option value="">Select Rating</option>
-              <option value="5">5 Stars</option>
-              <option value="4">4 Stars</option>
-              <option value="3">3 Stars</option>
-              <option value="2">2 Stars</option>
-              <option value="1">1 Star</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="review">Your Review:</label>
+            <label for="review">Phone number:</label>
             <textarea id="review" name="review" rows="4" required></textarea>
           </div>
-          <button type="submit">Submit Review</button>
+
+          <button type="submit">Submit Request</button>
         </form>
       </section>
     </div>
+
+
     <footer>
       <div class="footer-content">
         <nav>
@@ -210,5 +209,11 @@
         }
       });
     </script>
+
+    <script>
+    function _scrollTo(id) {
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'})
+    }
+  </script>
   </body>
 </html>
