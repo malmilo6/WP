@@ -40,25 +40,28 @@ body {
   color: #ffffff;
   font-size: 20px;
   cursor: pointer;
+
 }
 
 #navbar #hamburger {
   display: none;
+
 }
 
 #navbar ul li a.leave-review {
-  background-color: #8f97f3; /* Sets a bright, eye-catching background color */
-  color: #ffffff; /* Changes the text color to black for high contrast */
-  border-radius: 5px; /* Rounds the corners of the button */
-  font-size: 1.1em; /* Increases the font size */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+  background-color: #8f97f3; 
+  color: #ffffff; 
+  border-radius: 5px; 
+  font-size: 1.1em; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
   padding: 0.2em;
 }
 
-/* Enhances the hover effect for the "Leave review" button */
+
 #navbar ul li a.leave-review:hover {
-  background-color: #72aff5; /* Lightens the background color on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Increases the shadow for a lifting effect */
+  background-color: #72aff5; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
 }
 
 #home {
