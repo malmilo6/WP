@@ -8,27 +8,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-<!--    <nav id="sidebar">-->
-<!--      <button id="hamburger">&#9776;</button>-->
-<!--      <ul>-->
-<!--        <li><a href="#home">Home</a></li>-->
-<!--        <li><a href="#we-provide">What we provide?</a></li>-->
-<!--        <li><a href="#reviews">Reviews</a></li>-->
-<!--        <li><a href="#leave-review">Leave your review</a></li>-->
-<!--      </ul>-->
-<!--    </nav>-->
-<header id="main-header">
-    <nav id="navbar">
+    <header id="main-header">
+      <nav id="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#we-provide">What we provide?</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#leave-review">Leave your review</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#we-provide">We provide</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#leave-review">Leave review</a></li>
         </ul>
-    </nav>
-</header>
-
+      </nav>
+    </header>
     <div id="content">
       <section id="home">
         <div id="h1-container">
@@ -39,50 +28,41 @@
       <section id="we-provide">
         <h2>We provide:</h2>
         <div class="thing">
-          <img src="./assets/baitcaster.jpg"/>
+          <img src="./assets/baitcaster.jpg" />
           <h3>Fishing Reels</h3>
           <p>
             Our top-of-the-line fishing reels are meticulously crafted to
             provide smooth casting and retrieval, ensuring that every angler has
-            the precision and control needed to reel in the big catch. Whether
-            you're targeting freshwater bass or offshore marlin, our selection
-            of reels will exceed your expectations.
+            the precision and control needed to reel in the big catch.
           </p>
         </div>
         <div class="thing">
-          <img src="./assets/DSC04351_535x.webp"/>
+          <img src="./assets/DSC04351_535x.webp" />
           <h3>Fishing Rods</h3>
           <p>
             Elevate your fishing experience with our high-performance fishing
             rods. Engineered with cutting-edge materials and precision design,
             our rods offer the perfect balance of sensitivity, strength, and
-            responsiveness. From lightweight spinning rods for finesse fishing
-            to powerful baitcasting rods for battling trophy fish, we have the
-            perfect rod for every angler.
+            responsiveness.
           </p>
         </div>
         <div class="thing">
-          <img src="./assets/baits.jpg"/>
+          <img src="./assets/baits.jpg" />
           <h3>Baits and Lures</h3>
           <p>
             Attract more fish and increase your chances of success with our
-            premium selection of baits and lures. Whether you prefer natural
-            baits like live worms and minnows or artificial lures that mimic the
-            movements of prey, our extensive collection has everything you need
-            to entice even the most finicky fish. Trust our baits and lures to
-            help you reel in your next trophy catch.
+            premium selection of baits and lures. Natural baits like live worms
+            and minnows or artificial lures that mimic the movements of prey.
           </p>
         </div>
         <div class="thing">
-          <img src="./assets/boat.jpg"/>
+          <img src="./assets/boat.jpg" />
           <h3>Boats</h3>
           <p>
             Take your fishing adventures to the next level with our top-quality
-            fishing boats. Designed for durability, performance, and comfort,
-            our boats provide the ultimate platform for anglers to explore their
-            favorite fishing spots and pursue their passion for fishing. Whether
-            you're fishing in freshwater lakes, rivers, or offshore waters, our
-            boats deliver unmatched versatility and reliability.
+            fishing boats. Designed for durability, and comfort, our boats
+            provide the ultimate platform for anglers to explore their favorite
+            fishing spots and pursue their passion for fishing.
           </p>
         </div>
       </section>
@@ -126,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section id="leave-review" >
+      <section id="leave-review">
         <h2>Leave Your Review</h2>
         <form action="#" method="post">
           <div class="form-group">
@@ -166,6 +146,23 @@
         </nav>
         <p>&copy; 2024 Fishing organization. All Rights Reserved.</p>
       </div>
+      <div id="mascot">
+        <div id="mascot-jump">
+          <img src="./assets/hook.png" alt="" id="mascot-img" />
+          <div id="welcome">Welcome to your best fishing place 😍</div>
+        </div>
+      </div>
+      <div id="phone-icon">
+        <img src="assets/phone.gif" alt="Phone Icon" id="phone-img" />
+      </div>
+      <div id="phone-popup">
+        <p>
+          Call us now:
+        </p>
+        <a href="tel:+1234567890" id="call">
+          +1234567890
+        </a>
+      </div>
     </footer>
 
     <script>
@@ -187,18 +184,8 @@
           currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
           showReview(currentReviewIndex);
         }
-
         showReview(currentReviewIndex);
-
         setInterval(showNextReview, 10000);
-
-        const hamburger = document.getElementById("hamburger");
-        const sidebar = document.getElementById("sidebar");
-
-        hamburger.addEventListener("click", function () {
-          sidebar.classList.toggle("open");
-        });
-
         const navLinks = document.querySelectorAll("nav ul li a");
 
         navLinks.forEach(function (link) {
@@ -211,6 +198,16 @@
             }
           });
         });
+
+        const phoneIcon = document.getElementById("phone-icon");
+        const phonePopup = document.getElementById("phone-popup");
+
+        if (phoneIcon) {
+          phoneIcon.addEventListener("click", function () {
+            phonePopup.style.display =
+              phonePopup.style.display === "none" ? "block" : "none";
+          });
+        }
       });
     </script>
   </body>

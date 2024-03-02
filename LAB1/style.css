@@ -1,76 +1,48 @@
 body {
-    margin: 0;
-    padding-top: 60px;
-    font-family: Arial, sans-serif;
-    background-color: rgba(3, 0, 63, 0.708);
-    color: rgb(223, 228, 255);
-
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(136, 171, 212);
+  color: rgb(0, 4, 28);
 }
 
 #main-header {
-    background-color: rgba(250, 235, 255, 0.65); /* Adjust transparency for better visibility */
-    color: #000;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  background-color: #212448;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 #navbar {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
 }
 
 #navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 #navbar ul li {
-    margin: 0 30px;
+  margin: 0 20px;
 }
 
 #navbar ul li a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 #navbar #hamburger {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 80px;
-    }
-
-    #navbar #hamburger {
-        display: block;
-    }
-
-    #navbar ul {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 60px;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        text-align: center;
-    }
-
-    #navbar.open ul {
-        display: flex;
-    }
+  display: none;
 }
 
 #home {
@@ -83,8 +55,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-color: white;
-  margin-top: -80px
 }
 
 #home #h1-container {
@@ -95,13 +65,17 @@ body {
   padding: 2vw;
   line-height: 10vh;
   font-size: 64px;
-  color: rgb(223, 228, 255);
-  margin: 0 10px 200px 10px;
+  color: rgb(0, 8, 50);
+  margin: 0 10px 300px 10px;
 }
 
 section {
-  padding: 35px 20px 0 20px;
+  padding: 4rem 20px 0 20px;
   text-align: center;
+}
+
+section:first-child {
+  padding: 0 20px;
 }
 
 h2 {
@@ -113,7 +87,7 @@ h2 {
 .thing {
   margin-right: 30px;
   display: inline-block;
-  width: 20vw;
+  width: 20%;
   vertical-align: top;
 }
 
@@ -177,6 +151,7 @@ h2 {
   padding: 5px;
   border: 1px solid #4c6292;
   background-color: #e0eafddc;
+  height: 33px;
 }
 
 .form-group textarea {
@@ -186,6 +161,7 @@ h2 {
 #rating {
   font-size: 20px;
   width: 51vw;
+  height: 45px;
   padding: 5px;
   border: 1px solid #4c6292;
   background-color: #e0eafddc;
@@ -243,52 +219,179 @@ footer {
   text-decoration: underline;
 }
 
-#sidebar {
+#mascot {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 150px;
-  height: 100%;
-  padding-top: 20px;
-  z-index: 1000;
+  right: 40px;
+  top: 54px;
+  animation: appear 1s ease forwards;
+  z-index: 100;
 }
 
-#sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  background-color: rgba(9, 5, 47, 0.8);
+#mascot-jump {
+  animation: jump 5s infinite;
 }
 
-#sidebar ul li {
-  margin-bottom: 10px;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-54px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-#sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  transition: all 0.3s ease;
+@keyframes rotate {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
-#sidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(40px);
+  }
+  75% {
+    transform: translateY(40px);
+  }
 }
 
-#sidebar ul {
+#mascot img {
+  animation: rotate 5s infinite;
+  transition: transform 0.3s ease-in-out;
+  width: 100px;
+}
+
+#welcome {
   display: none;
+  background-color: #cbeafc;
+  color: rgb(0, 4, 28);
+  padding: 15px;
+  width: 130px;
+  border-radius: 15px;
+  font-size: 18px;
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#hamburger {
+#mascot:hover #welcome {
   display: block;
-  background: none;
-  border: none;
-  color: white;
-  background-color: rgba(9, 5, 47, 0.8);
-  font-size: 24px;
+}
+
+#phone-icon {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  z-index: 1001;
+  display: none;
+  background-color: #212448c2;
+  border-radius: 50px;
+}
+
+#phone-icon img {
+  padding: 6px;
+  width: 50px;
+  height: auto;
   cursor: pointer;
 }
 
-#sidebar.open ul {
-  display: block;
+#phone-popup {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  z-index: 1000;
+  background-color: #cbeafc;
+  color: rgb(0, 4, 28);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  font-size: 20px;
 }
+
+@media (max-width: 768px) {
+  #home #h1-container {
+    font-size: 48px;
+  }
+  .thing {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+  .thing img {
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+  }
+  #review-container .review p {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #leave-review .form-group input,
+  #leave-review .form-group textarea,
+  #rating {
+    width: 90%;
+  }
+  button[type="submit"] {
+    width: 90%;
+  }
+  #navbar ul li a {
+    font-size: 18px;
+  }
+  #navbar ul li {
+    margin: 0 10px;
+  }
+  #mascot img {
+    width: 80px;
+  }
+  #phone-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  #home #h1-container {
+    font-size: 36px;
+  }
+  #review-container .review img {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+  #navbar ul li {
+    position: relative;
+    margin: 0 8px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  #navbar ul li a {
+    font-size: 16px;
+  }
+  #navbar ul li::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    right: -8px;
+    top: 0;
+  }
+  #navbar ul li:last-child::after {
+    display: none;
+  }
+  #mascot img {
+    width: 60px;
+  }
+}
+
