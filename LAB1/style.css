@@ -240,6 +240,7 @@ footer {
 }
 
 #mascot {
+    display: none;
   position: fixed;
   right: 40px;
   top: 54px;
