@@ -39,29 +39,10 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
-  cursor: pointer;
-
 }
 
 #navbar #hamburger {
   display: none;
-
-}
-
-#navbar ul li a.leave-review {
-  background-color: #8f97f3; 
-  color: #ffffff; 
-  border-radius: 5px; 
-  font-size: 1.1em; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
-  padding: 0.2em;
-}
-
-
-#navbar ul li a.leave-review:hover {
-  background-color: #72aff5; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-
 }
 
 #home {
@@ -103,52 +84,6 @@ h2 {
   font-weight: bold;
 }
 
-.thing {
-  margin-right: 30px;
-  display: inline-block;
-  width: 20%;
-  vertical-align: top;
-}
-
-.thing img {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
-  border-radius: 100px;
-}
-
-.thing h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.thing p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.thing:last-child {
-  margin-right: 0;
-}
-
-#review-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.review p {
-  font-size: 30px;
-  width: 70vw;
-}
-
-.review img {
-  width: 50vw;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 #leave-review {
   padding: 25px 20px;
 }
@@ -188,11 +123,10 @@ h2 {
 
 button[type="submit"] {
   background-color: rgba(9, 5, 47, 0.8);
-  color: #ffffff;
-  padding: 12px 17px;
+  color: white;
+  padding: 15px 20px;
   font-size: 22px;
   width: 20vw;
-  border-radius: 10px;
 }
 
 button[type="submit"]:hover {
@@ -240,7 +174,6 @@ footer {
 }
 
 #mascot {
-    display: none;
   position: fixed;
   right: 40px;
   top: 54px;
@@ -342,77 +275,18 @@ footer {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
-  #home #h1-container {
-    font-size: 48px;
-  }
-  .thing {
-    width: 90%;
-    margin: 0 auto 30px;
-  }
-  .thing img {
-    width: 250px;
-    height: 250px;
-    border-radius: 200px;
-  }
-  #review-container .review p {
-    width: 90%;
-    margin: 0 auto;
-  }
-  #leave-review .form-group input,
-  #leave-review .form-group textarea,
-  #rating {
-    width: 90%;
-  }
-  button[type="submit"] {
-    width: 90%;
-  }
-  #navbar ul li a {
-    font-size: 18px;
-  }
-  #navbar ul li {
-    margin: 0 10px;
-  }
-  #mascot img {
-    width: 80px;
-  }
-  #phone-icon {
-    display: block;
-  }
+#navbar ul li a.leave-review {
+  background-color: #8f97f3;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0.2em;
 }
 
-@media (max-width: 480px) {
-  #home #h1-container {
-    font-size: 36px;
-  }
-  #review-container .review img {
-    width: 90%;
-    margin: 0 auto 20px;
-  }
-  #navbar ul li {
-    position: relative;
-    margin: 0 8px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-  }
-  #navbar ul li a {
-    font-size: 16px;
-  }
-  #navbar ul li::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    background-color: white;
-    right: -8px;
-    top: 0;
-  }
-  #navbar ul li:last-child::after {
-    display: none;
-  }
-  #mascot img {
-    width: 60px;
-  }
-}
 
+#navbar ul li a.leave-review:hover {
+  background-color: #72aff5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+}
