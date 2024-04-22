@@ -1,0 +1,50 @@
+.cancelButton,
+.confirmButton {
+  width: 34vw;
+  max-width: 200px;
+  height: 9vh;
+  margin: 20px 0.8vw 0;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.1s;
+}
+.cancelButton {
+  background-color: #3a3a3a;
+}
+
+.cancelButton img {
+  width: 55px;
+  height: 45px;
+}
+.confirmButton {
+  background-color: #3a3a3a;
+}
+
+.cancelButton:active,
+.confirmButton:active {
+  transform: translateY(1px);
+}
+
+.container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  border: 1px solid #3a3a3a;
+  padding: 10px 15px 30px;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.container p {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.confirmation-dialog {
+  text-align: center;
+}
